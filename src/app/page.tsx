@@ -15,7 +15,7 @@ export default function Dashboard() {
     setMounted(true);
   }, []);
 
-  const services = ['social-media-setup', 'account-protection', 'telegram-management'] as const;
+  const services = ['automation'] as const;
 
   // Calculate global stats
   const completedFormations = formations.filter((f) => {
@@ -70,10 +70,10 @@ export default function Dashboard() {
           className="mb-12"
         >
           <h1 className="text-4xl md:text-5xl font-bold font-syne text-white mb-4">
-            Bienvenue, <span style={{ color: serviceColors['social-media-setup'] }}>Rova</span>
+            Bienvenue, <span style={{ color: serviceColors['automation'] }}>Tsiory</span>
           </h1>
           <p className="text-xl text-gray-400 max-w-2xl">
-            Maîtrisez les formations pour devenir expert en Social Media Setup, Account Protection et Telegram Management.
+            Maîtrisez les formations pour devenir expert en Automation.
           </p>
         </motion.div>
 
@@ -247,7 +247,7 @@ export default function Dashboard() {
           </motion.section>
         ))}
 
-        {/* Certificate Section - Show when all 11 formations are completed */}
+        {/* Certificate Section - Show when all formations are completed */}
         {globalProgress === 100 && mounted && (
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -263,7 +263,7 @@ export default function Dashboard() {
                 Tu as complété toutes les formations de SD Academy
               </p>
               <p className="text-gray-400">
-                Tu es maintenant un expert en Social Media Setup, Account Protection et Telegram Management
+                Tu es maintenant un expert en Automation
               </p>
             </div>
           </motion.div>
